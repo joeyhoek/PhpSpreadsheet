@@ -256,6 +256,7 @@ class Cell
     public function getCalculatedValue($resetLog = true)
     {
         if ($this->dataType == DataType::TYPE_FORMULA) {
+            return $this->calculatedValue;
             try {
                 $result = Calculation::getInstance(
                     $this->getWorksheet()->getParent()
